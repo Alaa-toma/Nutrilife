@@ -1,0 +1,14 @@
+C:\web\back\api\NutriLife\Nutrilife.DataAccessLayer\bin\Debug\net9.0\Nutrilife.DataAccessLayer.deps.json
+C:\web\back\api\NutriLife\Nutrilife.DataAccessLayer\bin\Debug\net9.0\Nutrilife.DataAccessLayer.runtimeconfig.json
+C:\web\back\api\NutriLife\Nutrilife.DataAccessLayer\bin\Debug\net9.0\Nutrilife.DataAccessLayer.dll
+C:\web\back\api\NutriLife\Nutrilife.DataAccessLayer\bin\Debug\net9.0\Nutrilife.DataAccessLayer.pdb
+C:\web\back\api\NutriLife\Nutrilife.DataAccessLayer\obj\Debug\net9.0\Nutrilife.DataAccessLayer.csproj.AssemblyReference.cache
+C:\web\back\api\NutriLife\Nutrilife.DataAccessLayer\obj\Debug\net9.0\Nutrilife.DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\web\back\api\NutriLife\Nutrilife.DataAccessLayer\obj\Debug\net9.0\Nutrilife.DataAccessLayer.AssemblyInfoInputs.cache
+C:\web\back\api\NutriLife\Nutrilife.DataAccessLayer\obj\Debug\net9.0\Nutrilife.DataAccessLayer.AssemblyInfo.cs
+C:\web\back\api\NutriLife\Nutrilife.DataAccessLayer\obj\Debug\net9.0\Nutrilife.DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\web\back\api\NutriLife\Nutrilife.DataAccessLayer\obj\Debug\net9.0\Nutrilife.DataAccessLayer.dll
+C:\web\back\api\NutriLife\Nutrilife.DataAccessLayer\obj\Debug\net9.0\refint\Nutrilife.DataAccessLayer.dll
+C:\web\back\api\NutriLife\Nutrilife.DataAccessLayer\obj\Debug\net9.0\Nutrilife.DataAccessLayer.pdb
+C:\web\back\api\NutriLife\Nutrilife.DataAccessLayer\obj\Debug\net9.0\Nutrilife.DataAccessLayer.genruntimeconfig.cache
+C:\web\back\api\NutriLife\Nutrilife.DataAccessLayer\obj\Debug\net9.0\ref\Nutrilife.DataAccessLayer.dll
