@@ -12,3 +12,4 @@ C:\web\back\api\NutriLife\Nutrilife.DataAccessLayer\obj\Debug\net9.0\refint\Nutr
 C:\web\back\api\NutriLife\Nutrilife.DataAccessLayer\obj\Debug\net9.0\Nutrilife.DataAccessLayer.pdb
 C:\web\back\api\NutriLife\Nutrilife.DataAccessLayer\obj\Debug\net9.0\Nutrilife.DataAccessLayer.genruntimeconfig.cache
 C:\web\back\api\NutriLife\Nutrilife.DataAccessLayer\obj\Debug\net9.0\ref\Nutrilife.DataAccessLayer.dll
+C:\web\back\api\NutriLife\Nutrilife.DataAccessLayer\obj\Debug\net9.0\Nutrilife.DataAccessLayer.sourcelink.json

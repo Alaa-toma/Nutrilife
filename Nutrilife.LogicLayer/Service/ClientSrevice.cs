@@ -6,6 +6,7 @@ using Nutrilife.DataAccessLayer.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -30,6 +31,22 @@ namespace Nutrilife.LogicLayer.Service
         {
             var clients = await _IClientRepository.GetAllAsync(); // احضار البيانات
             return clients.Adapt<List<ClientResponse>>();  // ارجاع البيانات على شكل ليست من ريسبونس
+        }
+
+        public async Task<ClientResponse?> GetOne(Expression<Func<Client, bool>> filter)
+        {
+            var client = await _IClientRepository.GetOne(filter);
+            return client.Adapt<ClientResponse?>();
+        }
+
+        public async Task<bool> deleteClient(int id)
+        {
+            var client = await _IClientRepository.GetOne(i =>  i.Id == id);
+
+            if (client == null) return false;  // العنصر مش موجود
+            
+            return await _IClientRepository.deleteAsync(client);
+
         }
     }
 }

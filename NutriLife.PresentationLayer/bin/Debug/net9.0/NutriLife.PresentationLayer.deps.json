@@ -1107,6 +1107,7 @@
       },
       "Nutrilife.DataAccessLayer/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "9.0.13",
           "Microsoft.EntityFrameworkCore": "9.0.13",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.13"
         },

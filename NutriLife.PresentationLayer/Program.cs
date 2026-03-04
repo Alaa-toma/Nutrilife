@@ -1,6 +1,8 @@
 
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Nutrilife.DataAccessLayer.Data;
+using Nutrilife.DataAccessLayer.Models;
 using Nutrilife.DataAccessLayer.Repository;
 using Nutrilife.LogicLayer.Service;
 
@@ -24,6 +26,7 @@ namespace NutriLife.PresentationLayer
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+
             });
 
 
@@ -32,6 +35,11 @@ namespace NutriLife.PresentationLayer
 
             builder.Services.AddScoped<IClientService, ClientSrevice>();
             builder.Services.AddScoped<IClientRepository, ClientRepository>();
+            builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+
+
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+               .AddEntityFrameworkStores<ApplicationDbContext>();
             // ................
 
             var app = builder.Build();

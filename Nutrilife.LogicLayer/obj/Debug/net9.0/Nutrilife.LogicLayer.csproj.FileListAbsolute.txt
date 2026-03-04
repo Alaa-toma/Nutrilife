@@ -15,3 +15,4 @@ C:\web\back\api\NutriLife\Nutrilife.LogicLayer\obj\Debug\net9.0\Nutrilife.LogicL
 C:\web\back\api\NutriLife\Nutrilife.LogicLayer\obj\Debug\net9.0\ref\Nutrilife.LogicLayer.dll
 C:\web\back\api\NutriLife\Nutrilife.LogicLayer\bin\Debug\net9.0\Nutrilife.LogicLayer.runtimeconfig.json
 C:\web\back\api\NutriLife\Nutrilife.LogicLayer\obj\Debug\net9.0\Nutrilife.LogicLayer.genruntimeconfig.cache
+C:\web\back\api\NutriLife\Nutrilife.LogicLayer\obj\Debug\net9.0\Nutrilife.LogicLayer.sourcelink.json
