@@ -1,6 +1,32 @@
 [
   {
     "ContainingType": "NutriLife.PresentationLayer.Controllers.AccountController",
+    "Method": "ConfirmEmail",
+    "RelativePath": "api/Account/ConfirmEmail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NutriLife.PresentationLayer.Controllers.AccountController",
+    "Method": "LoginAsync",
+    "RelativePath": "api/Account/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Nutrilife.DataAccessLayer.DTO.Request.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NutriLife.PresentationLayer.Controllers.AccountController",
     "Method": "Register",
     "RelativePath": "api/Account/Register",
     "HttpMethod": "POST",
