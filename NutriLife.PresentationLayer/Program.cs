@@ -1,11 +1,14 @@
 ﻿
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Nutrilife.DataAccessLayer.Data;
 using Nutrilife.DataAccessLayer.Models;
 using Nutrilife.DataAccessLayer.Repository;
 using Nutrilife.DataAccessLayer.utilities;
 using Nutrilife.LogicLayer.Service;
+using System.Text;
 using System.Threading.Tasks;
 
 
@@ -43,9 +46,35 @@ namespace NutriLife.PresentationLayer
 
 
 
-            builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>(Options =>
+            {
+                Options.User.RequireUniqueEmail = true;
+            })
                .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
             // ................
+
+       
+
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+
+                    .AddJwtBearer(options =>
+                    {
+                        options.TokenValidationParameters = new TokenValidationParameters
+                        {
+                            ValidateIssuer = true,
+                            ValidateAudience = true,
+                            ValidateLifetime = true,
+                            ValidateIssuerSigningKey = true,
+                            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+                            ValidAudience = builder.Configuration["Jwt:Audience"],
+                            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SecretKey"]))
+                        };
+                    });
+
 
             var app = builder.Build();
 
@@ -56,7 +85,7 @@ namespace NutriLife.PresentationLayer
             }
 
             app.UseHttpsRedirection();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
 

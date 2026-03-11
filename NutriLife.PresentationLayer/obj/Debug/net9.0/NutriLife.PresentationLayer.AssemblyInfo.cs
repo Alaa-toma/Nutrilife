@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("fa039bdf-2c76-4301-9ef4-2ab0b5f9a09f")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("NutriLife.PresentationLayer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65cfe8506ffae925b592e03c14ff972012650479")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8e1027ff0c64ca7c6fbe500083da120b1e2a2fea")]
 [assembly: System.Reflection.AssemblyProductAttribute("NutriLife.PresentationLayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NutriLife.PresentationLayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
