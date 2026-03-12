@@ -12,6 +12,7 @@ namespace Nutrilife.LogicLayer.Service
     {
         Task<RegisterResponse> RegisterAsync(RegisterRequest request);
         Task<LoginResponse> LoginAsync(LoginRequest request);
+        Task<RegisterResponse> RegisterNutritionistAsync(NutritionistRequest request);
         Task<bool> ConfirmEmailAsync(string token, string UserId);
 
     }

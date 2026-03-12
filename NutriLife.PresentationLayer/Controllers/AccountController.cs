@@ -27,6 +27,14 @@ namespace NutriLife.PresentationLayer.Controllers
             return Ok(result);
         }
 
+        [HttpPost("register/nutritionist")]
+        public async Task<IActionResult> RegisterNutritionist(NutritionistRequest request)
+        {
+            var result = await _authenticationService.RegisterNutritionistAsync(request);
+            if (!result.Success) return BadRequest(result);
+            return Ok(result);
+        }
+
         [HttpPost("login")]
         public async Task<IActionResult> LoginAsync(LoginRequest request)
         {

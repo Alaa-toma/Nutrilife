@@ -41,12 +41,12 @@ namespace Nutrilife.LogicLayer.Service
 
         public async Task<bool> deleteClient(int id)
         {
-            var client = await _IClientRepository.GetOne(i =>  i.Id == id);
+            //  var client = await _IClientRepository.GetOne(i =>  i.Id == id);
 
-            if (client == null) return false;  // العنصر مش موجود
-            
-            return await _IClientRepository.deleteAsync(client);
+            //  if (client == null) return false;  // العنصر مش موجود
 
+            // return await _IClientRepository.deleteAsync(client);
+            return true;
         }
     }
 }

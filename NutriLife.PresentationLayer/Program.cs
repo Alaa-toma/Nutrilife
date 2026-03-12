@@ -8,6 +8,7 @@ using Nutrilife.DataAccessLayer.Models;
 using Nutrilife.DataAccessLayer.Repository;
 using Nutrilife.DataAccessLayer.utilities;
 using Nutrilife.LogicLayer.Service;
+using System;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -44,7 +45,7 @@ namespace NutriLife.PresentationLayer
             builder.Services.AddScoped<ISeedData, RoleSeedData>();
             builder.Services.AddTransient<IEmailSender, EmailSender>();
 
-
+            
 
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>(Options =>
             {

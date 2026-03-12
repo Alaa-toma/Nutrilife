@@ -19,7 +19,7 @@ namespace Nutrilife.DataAccessLayer.utilities
 
         async Task ISeedData.DataSeed()
         {
-            string[] roles = ["User", "Nutritionist", "Admin"];
+            string[] roles = ["Client", "Nutritionist", "Admin"];
 
             if (!await _roleManager.Roles.AnyAsync()) // اذا في قيمة وحدة عالاقل ترجع ترو
             {

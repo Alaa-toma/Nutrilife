@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Nutrilife.DataAccessLayer.Repository
 {
-    public interface INutritionistRepository : IGenericRepository<Nutritioist>
+    public interface INutritionistRepository : IGenericRepository<Nutritionist>
     {
     }
 }

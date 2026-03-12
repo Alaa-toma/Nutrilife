@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Nutrilife.DataAccessLayer.Models
 {
-    public class Subscribtion
+    public enum SubscriptionStatus
     {
+        Pending,
+        Active,
+        Finished,
+        Cancelled
     }
 }

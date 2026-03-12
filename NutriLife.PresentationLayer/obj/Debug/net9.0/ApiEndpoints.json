@@ -53,6 +53,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "NutriLife.PresentationLayer.Controllers.AccountController",
+    "Method": "RegisterNutritionist",
+    "RelativePath": "api/Account/register/nutritionist",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Nutrilife.DataAccessLayer.DTO.Request.NutritionistRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "NutriLife.PresentationLayer.Controllers.ClientController",
     "Method": "CreateClient",
     "RelativePath": "api/Client/CreateUser",

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Nutrilife.DataAccessLayer.Repository
 {
-    public class NutritionistRepository :GenericRepository<Nutritioist>, INutritionistRepository
+    public class NutritionistRepository :GenericRepository<Nutritionist>, INutritionistRepository
     {
         public NutritionistRepository(ApplicationDbContext context) : base(context)
         {
