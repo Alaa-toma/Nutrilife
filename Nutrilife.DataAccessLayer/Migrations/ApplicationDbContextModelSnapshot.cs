@@ -250,11 +250,10 @@ namespace Nutrilife.DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<DateTime>("EndDate")
-                        .HasColumnType("datetime2");
+                    b.Property<DateOnly>("EndDate")
+                        .HasColumnType("date");
 
                     b.Property<string>("Notes")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NutritionistId")
@@ -264,8 +263,8 @@ namespace Nutrilife.DataAccessLayer.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<DateTime>("StartDate")
-                        .HasColumnType("datetime2");
+                    b.Property<DateOnly>("StartDate")
+                        .HasColumnType("date");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -295,6 +294,8 @@ namespace Nutrilife.DataAccessLayer.Migrations
                     b.Property<float>("Weight")
                         .HasColumnType("real");
 
+                    b.ToTable("Users", (string)null);
+
                     b.HasDiscriminator().HasValue("Client");
                 });
 
@@ -315,6 +316,8 @@ namespace Nutrilife.DataAccessLayer.Migrations
 
                     b.Property<int>("YearsOfExperience")
                         .HasColumnType("int");
+
+                    b.ToTable("Users", (string)null);
 
                     b.HasDiscriminator().HasValue("Nutritionist");
                 });

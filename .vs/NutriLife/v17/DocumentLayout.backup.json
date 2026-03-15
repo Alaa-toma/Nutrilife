@@ -3,28 +3,16 @@
   "WorkspaceRootPath": "C:\\web\\back\\api\\NutriLife\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2EE3892B-9FDD-4B0A-874F-5640F916FE22}|Nutrilife.LogicLayer\\Nutrilife.LogicLayer.csproj|c:\\web\\back\\api\\nutrilife\\nutrilife.logiclayer\\service\\isubscriptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EE3892B-9FDD-4B0A-874F-5640F916FE22}|Nutrilife.LogicLayer\\Nutrilife.LogicLayer.csproj|solutionrelative:nutrilife.logiclayer\\service\\isubscriptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{12032744-4C59-4B2C-BC87-6842B0F87201}|NutriLife.PresentationLayer\\NutriLife.PresentationLayer.csproj|c:\\web\\back\\api\\nutrilife\\nutrilife.presentationlayer\\controllers\\subscriptioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12032744-4C59-4B2C-BC87-6842B0F87201}|NutriLife.PresentationLayer\\NutriLife.PresentationLayer.csproj|solutionrelative:nutrilife.presentationlayer\\controllers\\subscriptioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F0884C41-F642-4D45-A20B-E963AC09AD28}|Nutrilife.DataAccessLayer\\Nutrilife.DataAccessLayer.csproj|c:\\web\\back\\api\\nutrilife\\nutrilife.dataaccesslayer\\dto\\response\\subscriptionresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F0884C41-F642-4D45-A20B-E963AC09AD28}|Nutrilife.DataAccessLayer\\Nutrilife.DataAccessLayer.csproj|solutionrelative:nutrilife.dataaccesslayer\\dto\\response\\subscriptionresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F0884C41-F642-4D45-A20B-E963AC09AD28}|Nutrilife.DataAccessLayer\\Nutrilife.DataAccessLayer.csproj|c:\\web\\back\\api\\nutrilife\\nutrilife.dataaccesslayer\\repository\\subscriptionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0884C41-F642-4D45-A20B-E963AC09AD28}|Nutrilife.DataAccessLayer\\Nutrilife.DataAccessLayer.csproj|solutionrelative:nutrilife.dataaccesslayer\\repository\\subscriptionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F0884C41-F642-4D45-A20B-E963AC09AD28}|Nutrilife.DataAccessLayer\\Nutrilife.DataAccessLayer.csproj|c:\\web\\back\\api\\nutrilife\\nutrilife.dataaccesslayer\\dto\\request\\subscriptionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F0884C41-F642-4D45-A20B-E963AC09AD28}|Nutrilife.DataAccessLayer\\Nutrilife.DataAccessLayer.csproj|solutionrelative:nutrilife.dataaccesslayer\\dto\\request\\subscriptionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EE3892B-9FDD-4B0A-874F-5640F916FE22}|Nutrilife.LogicLayer\\Nutrilife.LogicLayer.csproj|c:\\web\\back\\api\\nutrilife\\nutrilife.logiclayer\\service\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EE3892B-9FDD-4B0A-874F-5640F916FE22}|Nutrilife.LogicLayer\\Nutrilife.LogicLayer.csproj|solutionrelative:nutrilife.logiclayer\\service\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12032744-4C59-4B2C-BC87-6842B0F87201}|NutriLife.PresentationLayer\\NutriLife.PresentationLayer.csproj|c:\\web\\back\\api\\nutrilife\\nutrilife.presentationlayer\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12032744-4C59-4B2C-BC87-6842B0F87201}|NutriLife.PresentationLayer\\NutriLife.PresentationLayer.csproj|solutionrelative:nutrilife.presentationlayer\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EE3892B-9FDD-4B0A-874F-5640F916FE22}|Nutrilife.LogicLayer\\Nutrilife.LogicLayer.csproj|c:\\web\\back\\api\\nutrilife\\nutrilife.logiclayer\\service\\iauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EE3892B-9FDD-4B0A-874F-5640F916FE22}|Nutrilife.LogicLayer\\Nutrilife.LogicLayer.csproj|solutionrelative:nutrilife.logiclayer\\service\\iauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{12032744-4C59-4B2C-BC87-6842B0F87201}|NutriLife.PresentationLayer\\NutriLife.PresentationLayer.csproj|c:\\web\\back\\api\\nutrilife\\nutrilife.presentationlayer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12032744-4C59-4B2C-BC87-6842B0F87201}|NutriLife.PresentationLayer\\NutriLife.PresentationLayer.csproj|solutionrelative:nutrilife.presentationlayer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,79 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ISubscriptionService.cs",
-              "DocumentMoniker": "C:\\web\\back\\api\\NutriLife\\Nutrilife.LogicLayer\\Service\\ISubscriptionService.cs",
-              "RelativeDocumentMoniker": "Nutrilife.LogicLayer\\Service\\ISubscriptionService.cs",
-              "ToolTip": "C:\\web\\back\\api\\NutriLife\\Nutrilife.LogicLayer\\Service\\ISubscriptionService.cs*",
-              "RelativeToolTip": "Nutrilife.LogicLayer\\Service\\ISubscriptionService.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Title": "SubscriptionController.cs",
+              "DocumentMoniker": "C:\\web\\back\\api\\NutriLife\\NutriLife.PresentationLayer\\Controllers\\SubscriptionController.cs",
+              "RelativeDocumentMoniker": "NutriLife.PresentationLayer\\Controllers\\SubscriptionController.cs",
+              "ToolTip": "C:\\web\\back\\api\\NutriLife\\NutriLife.PresentationLayer\\Controllers\\SubscriptionController.cs*",
+              "RelativeToolTip": "NutriLife.PresentationLayer\\Controllers\\SubscriptionController.cs*",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwB0AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T22:37:49.079Z",
+              "WhenOpened": "2026-03-15T21:16:11Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "SubscriptionResponse.cs",
-              "DocumentMoniker": "C:\\web\\back\\api\\NutriLife\\Nutrilife.DataAccessLayer\\DTO\\Response\\SubscriptionResponse.cs",
-              "RelativeDocumentMoniker": "Nutrilife.DataAccessLayer\\DTO\\Response\\SubscriptionResponse.cs",
-              "ToolTip": "C:\\web\\back\\api\\NutriLife\\Nutrilife.DataAccessLayer\\DTO\\Response\\SubscriptionResponse.cs*",
-              "RelativeToolTip": "Nutrilife.DataAccessLayer\\DTO\\Response\\SubscriptionResponse.cs*",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAuAAAAAAAAAA==",
+              "Title": "SubscriptionRepository.cs",
+              "DocumentMoniker": "C:\\web\\back\\api\\NutriLife\\Nutrilife.DataAccessLayer\\Repository\\SubscriptionRepository.cs",
+              "RelativeDocumentMoniker": "Nutrilife.DataAccessLayer\\Repository\\SubscriptionRepository.cs",
+              "ToolTip": "C:\\web\\back\\api\\NutriLife\\Nutrilife.DataAccessLayer\\Repository\\SubscriptionRepository.cs",
+              "RelativeToolTip": "Nutrilife.DataAccessLayer\\Repository\\SubscriptionRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBsAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T22:36:40.688Z",
+              "WhenOpened": "2026-03-15T21:05:29.232Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "SubscriptionRequest.cs",
-              "DocumentMoniker": "C:\\web\\back\\api\\NutriLife\\Nutrilife.DataAccessLayer\\DTO\\Request\\SubscriptionRequest.cs",
-              "RelativeDocumentMoniker": "Nutrilife.DataAccessLayer\\DTO\\Request\\SubscriptionRequest.cs",
-              "ToolTip": "C:\\web\\back\\api\\NutriLife\\Nutrilife.DataAccessLayer\\DTO\\Request\\SubscriptionRequest.cs*",
-              "RelativeToolTip": "Nutrilife.DataAccessLayer\\DTO\\Request\\SubscriptionRequest.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAApAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\web\\back\\api\\NutriLife\\NutriLife.PresentationLayer\\Program.cs",
+              "RelativeDocumentMoniker": "NutriLife.PresentationLayer\\Program.cs",
+              "ToolTip": "C:\\web\\back\\api\\NutriLife\\NutriLife.PresentationLayer\\Program.cs",
+              "RelativeToolTip": "NutriLife.PresentationLayer\\Program.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAQwDAAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T22:35:45.964Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AuthenticationService.cs",
-              "DocumentMoniker": "C:\\web\\back\\api\\NutriLife\\Nutrilife.LogicLayer\\Service\\AuthenticationService.cs",
-              "RelativeDocumentMoniker": "Nutrilife.LogicLayer\\Service\\AuthenticationService.cs",
-              "ToolTip": "C:\\web\\back\\api\\NutriLife\\Nutrilife.LogicLayer\\Service\\AuthenticationService.cs",
-              "RelativeToolTip": "Nutrilife.LogicLayer\\Service\\AuthenticationService.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAwDYAAABiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T22:16:15.389Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IAuthenticationService.cs",
-              "DocumentMoniker": "C:\\web\\back\\api\\NutriLife\\Nutrilife.LogicLayer\\Service\\IAuthenticationService.cs",
-              "RelativeDocumentMoniker": "Nutrilife.LogicLayer\\Service\\IAuthenticationService.cs",
-              "ToolTip": "C:\\web\\back\\api\\NutriLife\\Nutrilife.LogicLayer\\Service\\IAuthenticationService.cs",
-              "RelativeToolTip": "Nutrilife.LogicLayer\\Service\\IAuthenticationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T22:14:53.563Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\web\\back\\api\\NutriLife\\NutriLife.PresentationLayer\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "NutriLife.PresentationLayer\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\web\\back\\api\\NutriLife\\NutriLife.PresentationLayer\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "NutriLife.PresentationLayer\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAuwB0AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T22:08:19.831Z",
+              "WhenOpened": "2026-03-15T19:04:52.102Z",
               "EditorCaption": ""
             }
           ]

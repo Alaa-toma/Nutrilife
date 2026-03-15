@@ -69,16 +69,80 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "NutriLife.PresentationLayer.Controllers.ClientController",
-    "Method": "CreateClient",
-    "RelativePath": "api/Client/CreateUser",
+    "ContainingType": "NutriLife.PresentationLayer.Controllers.SubscriptionController",
+    "Method": "Create",
+    "RelativePath": "api/Subscription",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Nutrilife.DataAccessLayer.DTO.Request.ClientRequest",
+        "Type": "Nutrilife.DataAccessLayer.DTO.Request.SubscriptionRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NutriLife.PresentationLayer.Controllers.SubscriptionController",
+    "Method": "Approve",
+    "RelativePath": "api/Subscription/approve/{subscriptionId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "subscriptionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NutriLife.PresentationLayer.Controllers.SubscriptionController",
+    "Method": "Cancel",
+    "RelativePath": "api/Subscription/cancel/{subscriptionId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "subscriptionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NutriLife.PresentationLayer.Controllers.SubscriptionController",
+    "Method": "GetSubscriptionById",
+    "RelativePath": "api/Subscription/getbyid/{subscriptionId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "subscriptionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NutriLife.PresentationLayer.Controllers.SubscriptionController",
+    "Method": "Reject",
+    "RelativePath": "api/Subscription/reject/{subscriptionId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "subscriptionId",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

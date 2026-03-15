@@ -1,5 +1,6 @@
 ﻿
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -39,13 +40,14 @@ namespace NutriLife.PresentationLayer
             //objects ................
             // builder.Services.AddScoped< interface, class   >(); ... for interfaces and creating objects 
 
-            builder.Services.AddScoped<IClientService, ClientSrevice>();
-            builder.Services.AddScoped<IClientRepository, ClientRepository>();
+            builder.Services.AddScoped<ISubscriptionService, SubscriptionService>();
+            builder.Services.AddScoped<ISubscriptionRepository, SubscriptionRepository>();
+            builder.Services.AddScoped<INutritionistRepository, NutritionistRepository>();
             builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
             builder.Services.AddScoped<ISeedData, RoleSeedData>();
             builder.Services.AddTransient<IEmailSender, EmailSender>();
+            builder.Services.AddHostedService<SubscriptionExpiryService>();
 
-            
 
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>(Options =>
             {
@@ -78,6 +80,26 @@ namespace NutriLife.PresentationLayer
 
 
             var app = builder.Build();
+
+
+            app.UseExceptionHandler(appError =>
+            {
+                appError.Run(async context =>
+                {
+                    context.Response.StatusCode = 400;
+                    context.Response.ContentType = "application/json";
+
+                    var contextFeature = context.Features.Get<IExceptionHandlerFeature>();
+                    if (contextFeature != null)
+                    {
+                        await context.Response.WriteAsJsonAsync(new
+                        {
+                            message = contextFeature.Error.Message
+                        });
+                    }
+                });
+            });
+
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())

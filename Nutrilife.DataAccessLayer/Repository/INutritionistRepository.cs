@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace Nutrilife.DataAccessLayer.Repository
 {
-    public interface INutritionistRepository : IGenericRepository<Nutritionist>
+    public interface INutritionistRepository
     {
+        Task<Nutritionist> GetByIdAsync(string nutritionistId);
+        Task<List<Nutritionist>> GetAllAsync();
     }
 }

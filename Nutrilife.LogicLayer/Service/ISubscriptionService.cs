@@ -11,10 +11,12 @@ namespace Nutrilife.LogicLayer.Service
     public interface ISubscriptionService
     {
         
-        Task<SubscriptionResponse> CreateAsync(string clientId, SubscriptionRequest request);
-        Task<List<SubscriptionResponse>> GetClientSubscriptionsAsync(string clientId);
-        Task<List<SubscriptionResponse>> GetNutritionistSubscriptionsAsync(string nutritionistId);
-        Task<SubscriptionResponse> CancelAsync(int subscriptionId, string clientId);
+        Task<SubscriptionResponse> CreateAsync( SubscriptionRequest request); // create subscription request 
+        Task<SubscriptionResponse> ApproveAsync(int subscriptionId); // accepted
+        Task<SubscriptionResponse> RejectAsync(int subscriptionId); // not accepted 
+        Task<SubscriptionResponse?> GetByIdAsync(int subscriptionId);
+
+        Task<SubscriptionResponse> CancelAsync(int subscriptionId);
     }
     
 }

@@ -37,7 +37,7 @@ namespace Nutrilife.LogicLayer.Service
                 return new RegisterResponse() { Success = false, Message = errors };
             }
 
-            await _UserManager.AddToRoleAsync(user, "User");
+            await _UserManager.AddToRoleAsync(user, "Client");
 
 
             var token = await _UserManager.GenerateEmailConfirmationTokenAsync(user);
@@ -103,11 +103,13 @@ namespace Nutrilife.LogicLayer.Service
 
         public async Task<string> GenerateAccessToken(ApplicationUser user)
         {
+            var roles = await _UserManager.GetRolesAsync(user);
             var UserClaims = new List<Claim>()
             { // المعلومات الي باخذها لما افك تشفير التوكن
                 new Claim(ClaimTypes.NameIdentifier, user.Id),
                 new Claim(ClaimTypes.Name, user.UserName),
                 new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.Role, roles.FirstOrDefault() ?? "")
             };
 
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:SecretKey"]!));

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NutriLife.PresentationLayer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f152fb84a26899f792329c3ae6235cd302284f7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be44eae1fa6d52964b4c9a1277f98fc7161acc85")]
 [assembly: System.Reflection.AssemblyProductAttribute("NutriLife.PresentationLayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NutriLife.PresentationLayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

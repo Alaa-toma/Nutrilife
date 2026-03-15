@@ -18,7 +18,7 @@ namespace Nutrilife.DataAccessLayer.Repository
             _context = context;
         }
 
-        public async Task<T> createAsync(T entity)
+        public async Task<T> CreateAsync(T entity)
         {
             await _context.AddAsync(entity);
             await _context.SaveChangesAsync();

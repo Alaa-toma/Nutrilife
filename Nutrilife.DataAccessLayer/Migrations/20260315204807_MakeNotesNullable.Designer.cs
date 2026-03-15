@@ -12,8 +12,8 @@ using Nutrilife.DataAccessLayer.Data;
 namespace Nutrilife.DataAccessLayer.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260312223425_data")]
-    partial class data
+    [Migration("20260315204807_MakeNotesNullable")]
+    partial class MakeNotesNullable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -257,7 +257,6 @@ namespace Nutrilife.DataAccessLayer.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Notes")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NutritionistId")
@@ -298,6 +297,8 @@ namespace Nutrilife.DataAccessLayer.Migrations
                     b.Property<float>("Weight")
                         .HasColumnType("real");
 
+                    b.ToTable("Users", (string)null);
+
                     b.HasDiscriminator().HasValue("Client");
                 });
 
@@ -318,6 +319,8 @@ namespace Nutrilife.DataAccessLayer.Migrations
 
                     b.Property<int>("YearsOfExperience")
                         .HasColumnType("int");
+
+                    b.ToTable("Users", (string)null);
 
                     b.HasDiscriminator().HasValue("Nutritionist");
                 });

@@ -33,6 +33,8 @@ namespace Nutrilife.DataAccessLayer.Data
             base.OnModelCreating(builder);
 
             builder.Entity<ApplicationUser>().ToTable("Users");
+            builder.Entity<Client>().ToTable("Users");       
+            builder.Entity<Nutritionist>().ToTable("Users");
             builder.Entity<IdentityRole>().ToTable("Roles");
             builder.Entity<IdentityUserRole<string>>().ToTable("UserRoles");
 
