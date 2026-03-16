@@ -28,7 +28,15 @@ namespace Nutrilife.DataAccessLayer.Repository
      );
         }
 
+        //يرجع كل المشتركين مع هذا الاخصائي
+        public async Task<List<Subscription>> GetClientsByNutritionistAsync(string nutritionistId)
+        {
+            var all = await GetAllAsync(includes: new[] { "Client" });
 
+            return all.Where(s => s.NutritionistId == nutritionistId &&
+                                  s.Status == SubscriptionStatus.Active)
+                      .ToList();
+        }
         public async Task<Subscription?> GetByIdAsync(int subscriptionId)
         {
             return await GetOne(

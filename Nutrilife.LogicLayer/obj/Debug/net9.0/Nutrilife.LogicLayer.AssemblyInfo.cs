@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Nutrilife.LogicLayer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be44eae1fa6d52964b4c9a1277f98fc7161acc85")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b38640d51cedbb9102f61965e7e7dbf46262b61")]
 [assembly: System.Reflection.AssemblyProductAttribute("Nutrilife.LogicLayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Nutrilife.LogicLayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

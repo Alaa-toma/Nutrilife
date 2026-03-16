@@ -34,6 +34,18 @@ namespace NutriLife.PresentationLayer.Controllers
             return Ok(result);
         }
 
+
+        // Client cancels a subscription
+        [HttpPut("cancel/{subscriptionId}")]
+        [Authorize(Roles = "Client")]
+        public async Task<IActionResult> Cancel(int subscriptionId)
+        {
+            var result = await _subscriptionService.CancelAsync(subscriptionId);
+            return Ok(result);
+        }
+
+
+
         // Nutritionist approves a subscription
         [HttpPut("approve/{subscriptionId}")]
         [Authorize(Roles = "Nutritionist")]
@@ -53,12 +65,11 @@ namespace NutriLife.PresentationLayer.Controllers
         }
 
 
-        // Client cancels a subscription
-        [HttpPut("cancel/{subscriptionId}")]
-        [Authorize(Roles = "Client")]
-        public async Task<IActionResult> Cancel(int subscriptionId)
+        [HttpGet("clients")]
+        [Authorize(Roles = "Nutritionist")]
+        public async Task<IActionResult> GetMyClients()
         {
-            var result = await _subscriptionService.CancelAsync(subscriptionId);
+            var result = await _subscriptionService.GetClientsByNutritionistAsync();
             return Ok(result);
         }
 

@@ -141,5 +141,14 @@ namespace Nutrilife.LogicLayer.Service
             return updated.Adapt<SubscriptionResponse>();
         }
 
+        public async Task<List<SubscriptionResponse>> GetClientsByNutritionistAsync()
+        {
+            var nutritionistId = GetCurrentUserId();
+            var subscriptions = await _SubscriptionRepository
+                .GetClientsByNutritionistAsync(nutritionistId);
+
+            return subscriptions.Adapt<List<SubscriptionResponse>>();
+        }
+
     }
 }

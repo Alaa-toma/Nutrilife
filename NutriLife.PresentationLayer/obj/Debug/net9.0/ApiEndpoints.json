@@ -118,6 +118,16 @@
   },
   {
     "ContainingType": "NutriLife.PresentationLayer.Controllers.SubscriptionController",
+    "Method": "GetMyClients",
+    "RelativePath": "api/Subscription/clients",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NutriLife.PresentationLayer.Controllers.SubscriptionController",
     "Method": "GetSubscriptionById",
     "RelativePath": "api/Subscription/getbyid/{subscriptionId}",
     "HttpMethod": "GET",
