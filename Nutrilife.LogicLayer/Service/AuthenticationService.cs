@@ -1,5 +1,9 @@
-﻿using Mapster;
+﻿using Azure.Core;
+using Mapster;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Nutrilife.DataAccessLayer.DTO.Request;
@@ -17,14 +21,16 @@ namespace Nutrilife.LogicLayer.Service
         private readonly UserManager<ApplicationUser> _UserManager;
         private readonly IEmailSender _EmailSender;
         private readonly IConfiguration _configuration;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
         public AuthenticationService(UserManager<ApplicationUser> UserManager,
             IEmailSender emailSender,
-            IConfiguration configuration) 
+            IConfiguration configuration, IHttpContextAccessor httpContextAccessor) 
         {
             _UserManager = UserManager;
             _EmailSender = emailSender;
             _configuration = configuration;
+            _httpContextAccessor = httpContextAccessor;
         }  
          public async Task<RegisterResponse> RegisterAsync(RegisterRequest request)
         {
@@ -42,7 +48,8 @@ namespace Nutrilife.LogicLayer.Service
 
             var token = await _UserManager.GenerateEmailConfirmationTokenAsync(user);
             token = Uri.EscapeDataString(token);
-            var EmailUrl = $"https://localhost:7217/api/Account/ConfirmEmail?token={token}&userid={user.Id}";
+
+            var EmailUrl = $"{_httpContextAccessor.HttpContext.Request.Scheme}://{_httpContextAccessor.HttpContext.Request.Host}/api/Account/ConfirmEmail?token={token}&userid={user.Id}";
             // للتاكد انه الي دخل على الصفحة وصلته رسالة عالايميل, مش حدت عشوائي استخدم الرابط
 
             await _EmailSender.SendEmailAsync(user.Email, "welcom", $"<h1> welcom {request.UserName} </h1>"+"  "
@@ -65,7 +72,7 @@ namespace Nutrilife.LogicLayer.Service
 
             var token = await _UserManager.GenerateEmailConfirmationTokenAsync(user);
             token = Uri.EscapeDataString(token);
-            var EmailUrl = $"https://localhost:7217/api/Account/ConfirmEmail?token={token}&userid={user.Id}";
+            var EmailUrl = $"{_httpContextAccessor.HttpContext.Request.Scheme}://{_httpContextAccessor.HttpContext.Request.Host}/api/Account/ConfirmEmail?token={token}&userid={user.Id}";
             // للتاكد انه الي دخل على الصفحة وصلته رسالة عالايميل, مش حدت عشوائي استخدم الرابط
 
             await _EmailSender.SendEmailAsync(user.Email, "welcom", $"<h1> welcom {request.UserName} </h1>" + "  "
@@ -134,10 +141,35 @@ namespace Nutrilife.LogicLayer.Service
 
             var result = await _UserManager.ConfirmEmailAsync(user, token);
 
-            if (!result.Succeeded) {  return false;}
+            if (!result.Succeeded)
+            {
+                var errors = string.Join(", ", result.Errors.Select(e => e.Description));
+                throw new Exception(errors);
+            }
 
             return true;
 
+        }
+
+        public async Task<bool> ResendConfirmationEmailAsync(string email)
+        {
+            var user = await _UserManager.FindByEmailAsync(email);
+            if (user == null)
+                throw new Exception("User not found");
+
+            if (user.EmailConfirmed)
+                throw new Exception("Email is already confirmed");
+
+            var token = await _UserManager.GenerateEmailConfirmationTokenAsync(user);
+            token = Uri.EscapeDataString(token);
+
+
+            var EmailUrl = $"{_httpContextAccessor.HttpContext.Request.Scheme}://{_httpContextAccessor.HttpContext.Request.Host}/api/Account/ConfirmEmail?token={token}&userid={user.Id}";
+
+            await _EmailSender.SendEmailAsync(user.Email, "welcom", $"<h1> welcom {user.UserName} </h1>" + "  "
+                 + $"<a href='{EmailUrl}'> confirm </a> ");
+
+            return true;
         }
     }
 }

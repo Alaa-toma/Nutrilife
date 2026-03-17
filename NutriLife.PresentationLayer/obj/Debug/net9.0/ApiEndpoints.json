@@ -69,6 +69,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "NutriLife.PresentationLayer.Controllers.AccountController",
+    "Method": "ResendConfirmationEmail",
+    "RelativePath": "api/Account/resend-confirmation-email",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Nutrilife.DataAccessLayer.DTO.Request.ResendConfirmationEmailDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "NutriLife.PresentationLayer.Controllers.SubscriptionController",
     "Method": "Create",
     "RelativePath": "api/Subscription",

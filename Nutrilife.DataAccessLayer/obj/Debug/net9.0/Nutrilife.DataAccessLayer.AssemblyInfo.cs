@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Nutrilife.DataAccessLayer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b38640d51cedbb9102f61965e7e7dbf46262b61")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+208a97ca35bac2728573bc9347631501481cc887")]
 [assembly: System.Reflection.AssemblyProductAttribute("Nutrilife.DataAccessLayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Nutrilife.DataAccessLayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

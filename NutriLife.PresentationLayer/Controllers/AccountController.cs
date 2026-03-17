@@ -48,19 +48,26 @@ namespace NutriLife.PresentationLayer.Controllers
             return Ok(result);
         }
 
-        [HttpGet("ConfirmEmail")]
-        public async Task<IActionResult> ConfirmEmail(string token, string UserId)
-        {
-            var isConfirmed = _authenticationService.ConfirmEmailAsync(token, UserId);
 
-            if (isConfirmed.IsCompletedSuccessfully) { return Ok(); }
-            return BadRequest();
-        } 
-    
-    
-    
-    
-    
-    
+        [HttpGet("ConfirmEmail")]
+        public async Task<IActionResult> ConfirmEmail( string token,  string UserId)
+        {
+            var isConfirmed = await _authenticationService.ConfirmEmailAsync(token, UserId);
+
+            if (!isConfirmed) { return BadRequest(); }
+            return Ok();
+        }
+
+
+        [HttpPost("resend-confirmation-email")]
+        public async Task<IActionResult> ResendConfirmationEmail(ResendConfirmationEmailDTO request)
+        {
+            var result = await _authenticationService
+                .ResendConfirmationEmailAsync(request.Email);
+            return Ok(new { message = "Confirmation email sent successfully" });
+        }
+
+
+
     }
 }

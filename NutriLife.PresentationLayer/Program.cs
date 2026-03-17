@@ -32,8 +32,7 @@ namespace NutriLife.PresentationLayer
 
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
             {
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-
+                options.UseSqlServer("Server=db44885.public.databaseasp.net;Database=db44885;User Id=db44885;Password=8Wj+Td@93Rf?;Encrypt=True;TrustServerCertificate=True;MultipleActiveResultSets=True;");
             });
 
 
@@ -94,7 +93,9 @@ namespace NutriLife.PresentationLayer
                     {
                         await context.Response.WriteAsJsonAsync(new
                         {
-                            message = contextFeature.Error.Message
+                            message = contextFeature.Error.Message,
+                            inner = contextFeature.Error.InnerException?.Message, // ← add this
+                            stackTrace = contextFeature.Error.StackTrace // ← add this
                         });
                     }
                 });
