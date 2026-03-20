@@ -35,6 +35,19 @@ namespace NutriLife.PresentationLayer
                 options.UseSqlServer("Server=db44885.public.databaseasp.net;Database=db44885;User Id=db44885;Password=8Wj+Td@93Rf?;Encrypt=True;TrustServerCertificate=True;MultipleActiveResultSets=True;");
             });
 
+            var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+
+
+            //which front end can use my apis?
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                                  policy =>
+                                  {
+                                      policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+                                  });
+            });
 
             //objects ................
             // builder.Services.AddScoped< interface, class   >(); ... for interfaces and creating objects 
@@ -51,6 +64,14 @@ namespace NutriLife.PresentationLayer
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>(Options =>
             {
                 Options.User.RequireUniqueEmail = true;
+
+                Options.Password.RequireDigit = true;
+                Options.Password.RequireLowercase = true;
+                Options.Password.RequireUppercase = true;
+                Options.Password.RequiredLength = 8;
+
+                Options.Lockout.MaxFailedAccessAttempts = 4; // 4 محاولات خطأ ينعمل حظر لليوزر مدة معينة
+                Options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(4); // مدة الحظر
             })
                .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
             // ................
@@ -101,6 +122,7 @@ namespace NutriLife.PresentationLayer
                 });
             });
 
+            app.UseCors(MyAllowSpecificOrigins);
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
