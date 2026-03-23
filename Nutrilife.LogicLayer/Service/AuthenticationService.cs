@@ -1,6 +1,7 @@
 ﻿using Azure.Core;
 using Mapster;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.WebUtilities;
@@ -170,6 +171,95 @@ namespace Nutrilife.LogicLayer.Service
                  + $"<a href='{EmailUrl}'> confirm </a> ");
 
             return true;
+        }
+
+
+        public async Task<ResetPasswordResponse> resetPasswordAsync(ResendConfirmationEmailDTO request)
+        {
+            var user = await _UserManager.FindByEmailAsync(request.Email);
+            if(user == null) // نتأكد انه اليوزر موجود
+            {
+                return new ResetPasswordResponse()
+                {
+                    Success = false,
+                    Message="email not found"
+                };
+            }
+
+            var random = new Random();
+            var code = random.Next(1000, 9999).ToString(); // كود عشوائي من 4 ارقام
+
+            user.codeResetPassword = code;
+            user.passwordResetCodeExpiry = DateTime.UtcNow.AddMinutes(15); //  الكود صالح لمدة 15 دقيقة
+
+            await _UserManager.UpdateAsync(user);
+
+            await _EmailSender.SendEmailAsync(request.Email, "reset Password", $"<p> code is {code} </p>");
+
+            return new ResetPasswordResponse()
+            {
+                Success = true,
+                Message = "Code Sent To Your Email"
+            };
+        }
+
+        public async Task<ResetPasswordResponse> NewPasswordAsync(NewPasswordRequest request)
+        {
+            var user = await _UserManager.FindByEmailAsync(request.Email);
+            if (user == null) // نتأكد انه اليوزر موجود
+            {
+                return new ResetPasswordResponse()
+                {
+                    Success = false,
+                    Message = "email not found"
+                };
+            }
+            else if(user.codeResetPassword != request.Code)
+            {
+                return new ResetPasswordResponse()
+                {
+                    Success = false,
+                    Message = "Invalid Code"
+                };
+            }
+            else if(user.passwordResetCodeExpiry < DateTime.UtcNow)
+            {
+                    return new ResetPasswordResponse()
+                    {
+                        Success = false,
+                        Message = "Code Expired"
+                    };
+            }
+
+            var isSmaePass = await _UserManager.CheckPasswordAsync(user, request.NewPassword);
+            if (isSmaePass)
+            {
+                    return new ResetPasswordResponse()
+                    {
+                        Success = false,
+                        Message = "This is your old Pass! The new must be different."
+                    };
+            }
+
+            var token = await _UserManager.GeneratePasswordResetTokenAsync(user); //ما الها فائدة هنا, لانه الطريقة ما تطلب توكن, الاستخدام حتى يروح الايرور في ميثود الابديت
+           var result=  await _UserManager.ResetPasswordAsync(user,token, request.NewPassword);
+            if (!result.Succeeded)
+            {
+                    return new ResetPasswordResponse()
+                    {
+                        Success = false,
+                        Message = "Password reset Faild!"
+                    };
+            }
+
+            await _EmailSender.SendEmailAsync(request.Email, "Change Password", "$<p> Your Password Changed Successfully.. </p>");
+
+
+             return new ResetPasswordResponse()
+                {
+                    Success = true,
+                    Message = "Changed Successfully.."
+                };
         }
     }
 }

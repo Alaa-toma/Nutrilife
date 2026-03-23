@@ -14,6 +14,10 @@ namespace Nutrilife.DataAccessLayer.Models
             public string? FullName { get; set; }
             public string? Gender { get; set; }
             public DateOnly DOF { get; set; }
+
+            public string? codeResetPassword { get; set; }
+            public DateTime? passwordResetCodeExpiry { get; set; }
+
            
         
     }

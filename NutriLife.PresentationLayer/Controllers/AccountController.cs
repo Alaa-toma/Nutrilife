@@ -67,6 +67,26 @@ namespace NutriLife.PresentationLayer.Controllers
             return Ok(new { message = "Confirmation email sent successfully" });
         }
 
+        [HttpPost("sendCode")]
+        public async Task<IActionResult> ResetPasswordRequest(ResendConfirmationEmailDTO request)
+        {
+           var result = await _authenticationService.resetPasswordAsync(request);
+
+            if (!result.Success) {return BadRequest(result); }
+
+            return Ok(result);
+        }
+
+        [HttpPost("ResetPassword")]
+        public async Task<IActionResult> NewPassword(NewPasswordRequest request)
+        {
+            var result = await _authenticationService.NewPasswordAsync(request);
+
+            if (!result.Success) { return BadRequest(result); }
+
+            return Ok(result);
+        }
+
 
 
     }
