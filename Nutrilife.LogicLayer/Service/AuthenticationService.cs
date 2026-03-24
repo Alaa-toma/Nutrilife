@@ -5,8 +5,10 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.WebUtilities;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using Nutrilife.DataAccessLayer.Data;
 using Nutrilife.DataAccessLayer.DTO.Request;
 using Nutrilife.DataAccessLayer.DTO.Response;
 using Nutrilife.DataAccessLayer.Models;
@@ -23,17 +25,20 @@ namespace Nutrilife.LogicLayer.Service
         private readonly IEmailSender _EmailSender;
         private readonly IConfiguration _configuration;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly ApplicationDbContext _dbContext;
 
         public AuthenticationService(UserManager<ApplicationUser> UserManager,
             IEmailSender emailSender,
-            IConfiguration configuration, IHttpContextAccessor httpContextAccessor) 
+            IConfiguration configuration, IHttpContextAccessor httpContextAccessor, 
+            ApplicationDbContext dbContext) 
         {
             _UserManager = UserManager;
             _EmailSender = emailSender;
             _configuration = configuration;
             _httpContextAccessor = httpContextAccessor;
+            _dbContext = dbContext;
         }  
-         public async Task<RegisterResponse> RegisterAsync(RegisterRequest request)
+         public async Task<RegisterResponse> RegisterAsync(ClientRequest request)
         {
             var user = request.Adapt<Client>();
             var result = await _UserManager.CreateAsync(user, request.Password);
@@ -261,5 +266,20 @@ namespace Nutrilife.LogicLayer.Service
                     Message = "Changed Successfully.."
                 };
         }
+
+        public async Task<List<ClientResponse>> GetAllClientsInNutrilife()
+        {
+            var clients = await _dbContext.Users.OfType<Client>().ToListAsync();
+
+            return clients.Adapt<List<ClientResponse>>();
+        }
+        public async Task<List<NutritionistResponse>> GetAllNutritionistInNutrilife()
+        {
+            var Nutri = await _dbContext.Users.OfType<Nutritionist>().ToListAsync();
+
+            return Nutri.Adapt<List<NutritionistResponse>>();
+        }
+   
+    
     }
 }

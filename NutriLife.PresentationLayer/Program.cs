@@ -11,6 +11,7 @@ using Nutrilife.DataAccessLayer.utilities;
 using Nutrilife.LogicLayer.Service;
 using System;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 
@@ -56,6 +57,8 @@ namespace NutriLife.PresentationLayer
             builder.Services.AddScoped<ISubscriptionRepository, SubscriptionRepository>();
             builder.Services.AddScoped<INutritionistRepository, NutritionistRepository>();
             builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+            builder.Services.AddScoped<IAppointmentService, AppointmentService>();
+            builder.Services.AddScoped<IAppointmentRepository, AppointmentRepository>();
             builder.Services.AddScoped<ISeedData, RoleSeedData>();
             builder.Services.AddTransient<IEmailSender, EmailSender>();
             builder.Services.AddHostedService<SubscriptionExpiryService>();
@@ -76,7 +79,13 @@ namespace NutriLife.PresentationLayer
                .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
             // ................
 
-       
+            // with enums, to  show as string..
+            builder.Services.AddControllers()
+         .AddJsonOptions(options =>
+         {
+             options.JsonSerializerOptions.Converters
+                 .Add(new JsonStringEnumConverter()); // ← allows "Electronic" instead of 0
+         });
 
             builder.Services.AddAuthentication(options =>
             {

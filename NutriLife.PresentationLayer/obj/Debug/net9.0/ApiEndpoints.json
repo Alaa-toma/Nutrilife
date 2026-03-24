@@ -1,6 +1,26 @@
 [
   {
     "ContainingType": "NutriLife.PresentationLayer.Controllers.AccountController",
+    "Method": "AllClients",
+    "RelativePath": "api/Account/allClients",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NutriLife.PresentationLayer.Controllers.AccountController",
+    "Method": "allNutritionists",
+    "RelativePath": "api/Account/allNutritionists",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NutriLife.PresentationLayer.Controllers.AccountController",
     "Method": "ConfirmEmail",
     "RelativePath": "api/Account/ConfirmEmail",
     "HttpMethod": "GET",
@@ -46,7 +66,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Nutrilife.DataAccessLayer.DTO.Request.RegisterRequest",
+        "Type": "Nutrilife.DataAccessLayer.DTO.Request.ClientRequest",
         "IsRequired": true
       }
     ],
@@ -112,6 +132,54 @@
         "Name": "request",
         "Type": "Nutrilife.DataAccessLayer.DTO.Request.ResendConfirmationEmailDTO",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NutriLife.PresentationLayer.Controllers.AppointmentController",
+    "Method": "CreatrApointmentRequest",
+    "RelativePath": "api/Appointment/AppointmentRequest",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Nutrilife.DataAccessLayer.DTO.Request.AppointmentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NutriLife.PresentationLayer.Controllers.AppointmentController",
+    "Method": "GetClientAppointments",
+    "RelativePath": "api/Appointment/ClientAppointment",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ClientId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NutriLife.PresentationLayer.Controllers.AppointmentController",
+    "Method": "GetNutritionistAppointments",
+    "RelativePath": "api/Appointment/NutritionistAppointment",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "NutriId",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

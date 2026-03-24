@@ -170,11 +170,6 @@ namespace Nutrilife.DataAccessLayer.Migrations
                     b.Property<DateOnly>("DOF")
                         .HasColumnType("date");
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasMaxLength(21)
-                        .HasColumnType("nvarchar(21)");
-
                     b.Property<string>("Email")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
@@ -221,6 +216,11 @@ namespace Nutrilife.DataAccessLayer.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
+                    b.Property<string>("UserType")
+                        .IsRequired()
+                        .HasMaxLength(21)
+                        .HasColumnType("nvarchar(21)");
+
                     b.Property<string>("codeResetPassword")
                         .HasColumnType("nvarchar(max)");
 
@@ -239,9 +239,42 @@ namespace Nutrilife.DataAccessLayer.Migrations
 
                     b.ToTable("Users", (string)null);
 
-                    b.HasDiscriminator().HasValue("ApplicationUser");
+                    b.HasDiscriminator<string>("UserType").HasValue("ApplicationUser");
 
                     b.UseTphMappingStrategy();
+                });
+
+            modelBuilder.Entity("Nutrilife.DataAccessLayer.Models.Appointment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Notes")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SubscriptioId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SubscriptionId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("appointment_date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("status")
+                        .HasColumnType("int");
+
+                    b.Property<int>("type")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SubscriptionId");
+
+                    b.ToTable("Appointments");
                 });
 
             modelBuilder.Entity("Nutrilife.DataAccessLayer.Models.Subscription", b =>
@@ -300,8 +333,6 @@ namespace Nutrilife.DataAccessLayer.Migrations
                     b.Property<float>("Weight")
                         .HasColumnType("real");
 
-                    b.ToTable("Users", (string)null);
-
                     b.HasDiscriminator().HasValue("Client");
                 });
 
@@ -322,8 +353,6 @@ namespace Nutrilife.DataAccessLayer.Migrations
 
                     b.Property<int>("YearsOfExperience")
                         .HasColumnType("int");
-
-                    b.ToTable("Users", (string)null);
 
                     b.HasDiscriminator().HasValue("Nutritionist");
                 });
@@ -377,6 +406,17 @@ namespace Nutrilife.DataAccessLayer.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Nutrilife.DataAccessLayer.Models.Appointment", b =>
+                {
+                    b.HasOne("Nutrilife.DataAccessLayer.Models.Subscription", "Subscription")
+                        .WithMany()
+                        .HasForeignKey("SubscriptionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Subscription");
                 });
 
             modelBuilder.Entity("Nutrilife.DataAccessLayer.Models.Subscription", b =>

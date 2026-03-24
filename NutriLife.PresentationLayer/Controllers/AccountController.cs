@@ -21,7 +21,7 @@ namespace NutriLife.PresentationLayer.Controllers
         }
 
         [HttpPost("Register")]
-        public async Task<IActionResult> Register(RegisterRequest request)
+        public async Task<IActionResult> Register(ClientRequest request)
         {
             var result = await _authenticationService.RegisterAsync(request);
             return Ok(result);
@@ -87,7 +87,27 @@ namespace NutriLife.PresentationLayer.Controllers
             return Ok(result);
         }
 
+        [HttpGet("allClients")]
+        public async Task<IActionResult> AllClients()
+        {
+            var result = await _authenticationService.GetAllClientsInNutrilife();
+            if(result == null)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
 
+        [HttpGet("allNutritionists")]
+        public async Task<IActionResult> allNutritionists()
+        {
+            var result = await _authenticationService.GetAllNutritionistInNutrilife();
+            if (result == null)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
 
     }
 }

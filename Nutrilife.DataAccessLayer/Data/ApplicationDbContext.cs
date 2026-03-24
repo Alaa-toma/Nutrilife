@@ -19,6 +19,8 @@ namespace Nutrilife.DataAccessLayer.Data
         public DbSet<Client> Clients { get; set; }
         public DbSet<Nutritionist> Nutritionists { get; set; }
         public DbSet<Subscription> Subscriptions { get; set; }
+        public DbSet<Appointment> Appointments { get; set; }
+
 
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options,
@@ -32,11 +34,15 @@ namespace Nutrilife.DataAccessLayer.Data
         {
             base.OnModelCreating(builder);
 
-            builder.Entity<ApplicationUser>().ToTable("Users");
-            builder.Entity<Client>().ToTable("Users");       
-            builder.Entity<Nutritionist>().ToTable("Users");
+            builder.Entity<ApplicationUser>().ToTable("Users")
+             .HasDiscriminator<string>("UserType")
+             .HasValue<Client>("Client")
+             .HasValue<Nutritionist>("Nutritionist");
+
             builder.Entity<IdentityRole>().ToTable("Roles");
             builder.Entity<IdentityUserRole<string>>().ToTable("UserRoles");
+
+            
 
 
             // *********   subscription **************

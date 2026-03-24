@@ -13,6 +13,7 @@ namespace Nutrilife.DataAccessLayer.Models
         public float Weight { get; set; }
         public string? Disease { get; set; }
         public string? Goal { get; set; }
+        public string? PhoneNumber { get; set; }
 
         public ICollection<Subscription> Subscriptions { get; set; }
     }
