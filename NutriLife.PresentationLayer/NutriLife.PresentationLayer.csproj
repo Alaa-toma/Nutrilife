@@ -21,4 +21,8 @@
     <ProjectReference Include="..\Nutrilife.LogicLayer\Nutrilife.LogicLayer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="images\" />
+  </ItemGroup>
+
 </Project>

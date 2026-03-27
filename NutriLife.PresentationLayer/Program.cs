@@ -8,6 +8,7 @@ using Nutrilife.DataAccessLayer.Data;
 using Nutrilife.DataAccessLayer.Models;
 using Nutrilife.DataAccessLayer.Repository;
 using Nutrilife.DataAccessLayer.utilities;
+using Nutrilife.LogicLayer.Mapping;
 using Nutrilife.LogicLayer.Service;
 using System;
 using System.Text;
@@ -63,6 +64,9 @@ namespace NutriLife.PresentationLayer
             builder.Services.AddTransient<IEmailSender, EmailSender>();
             builder.Services.AddHostedService<SubscriptionExpiryService>();
 
+
+
+            MappsterConfig.MappsterConfigRegister();
 
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>(Options =>
             {

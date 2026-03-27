@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Nutrilife.DataAccessLayer.Models
 {
-    public class Appointment
+    public class Appointment : AuditableEntity
     {
         [Required]
         public int Id { get; set; }

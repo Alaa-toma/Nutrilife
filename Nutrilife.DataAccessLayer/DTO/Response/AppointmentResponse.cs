@@ -10,5 +10,6 @@ namespace Nutrilife.DataAccessLayer.DTO.Response
     {
         public bool Confirmd { get; set; }
         public string message { get; set; }
+
     }
 }

@@ -72,7 +72,10 @@ namespace Nutrilife.LogicLayer.Service
             var result = await _UserManager.CreateAsync(user, request.Password);
 
             if (!result.Succeeded)
-                return new RegisterResponse { Success = false, Message = result.Errors.First().Description };
+            {
+                var errors = string.Join(", ", result.Errors.Select(e => e.Description));
+                return new RegisterResponse { Success = false, Message = errors };
+            }
 
             await _UserManager.AddToRoleAsync(user, "Nutritionist");
 

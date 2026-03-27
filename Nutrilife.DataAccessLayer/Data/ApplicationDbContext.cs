@@ -57,11 +57,14 @@ namespace Nutrilife.DataAccessLayer.Data
                 .HasColumnType("decimal(18,2)");
 
 
+
+            // Fluent API, “A Subscription belongs to one Client, and a Client can have many Subscriptions.” 
+            // control (and prevent) cascade delete behavior.
             builder.Entity<Subscription>()
-        .HasOne(s => s.Client)
-        .WithMany(c => c.Subscriptions)
-        .HasForeignKey(s => s.ClientId)
-        .OnDelete(DeleteBehavior.Restrict);
+             .HasOne(s => s.Client)
+             .WithMany(c => c.Subscriptions)
+             .HasForeignKey(s => s.ClientId)
+             .OnDelete(DeleteBehavior.Restrict);
 
             builder.Entity<Subscription>()
                 .HasOne(s => s.Nutritionist)
