@@ -19,7 +19,7 @@ namespace Nutrilife.LogicLayer.Service
                     "images", FileName
                     );
 
-                using (var stream = File.Create(FilePath)
+                using (var stream = File.Create(FilePath))
                 {
                     await file.CopyToAsync(stream);
                 }

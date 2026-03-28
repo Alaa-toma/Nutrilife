@@ -173,6 +173,5 @@ C:\web\back\api\NutriLife\NutriLife.PresentationLayer\bin\Debug\net9.0\Microsoft
 C:\web\back\api\NutriLife\NutriLife.PresentationLayer\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\web\back\api\NutriLife\NutriLife.PresentationLayer\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
 C:\web\back\api\NutriLife\NutriLife.PresentationLayer\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
-C:\web\back\api\NutriLife\NutriLife.PresentationLayer\obj\Debug\net9.0\NutriLife.PresentationLayer.sourcelink.json
 C:\web\back\api\NutriLife\NutriLife.PresentationLayer\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\web\back\api\NutriLife\NutriLife.PresentationLayer\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
