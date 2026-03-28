@@ -51,6 +51,9 @@ namespace NutriLife.PresentationLayer
                                   });
             });
 
+
+
+
             //objects ................
             // builder.Services.AddScoped< interface, class   >(); ... for interfaces and creating objects 
 
@@ -146,6 +149,10 @@ namespace NutriLife.PresentationLayer
             app.UseHttpsRedirection();
             app.UseAuthentication();
             app.UseAuthorization();
+
+            // to render ..
+            var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+            app.Run($"http://0.0.0.0:{port}");
 
 
             app.MapControllers();
