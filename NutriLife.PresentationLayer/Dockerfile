@@ -5,14 +5,17 @@ EXPOSE 10000
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 
-# Copy all layers so dependencies can be resolved
-COPY ../Nutrilife.DataAccessLayer ./Nutrilife.DataAccessLayer
-COPY ../Nutrilife.LogicLayer ./Nutrilife.LogicLayer
-COPY . ./NutriLife.PresentationLayer
+# Copy all 3 layers
+COPY NutriLife.PresentationLayer/ ./NutriLife.PresentationLayer/
+COPY Nutrilife.DataAccessLayer/ ./Nutrilife.DataAccessLayer/
+COPY Nutrilife.LogicLayer/ ./Nutrilife.LogicLayer/
+COPY NutriLife.sln .
 
-WORKDIR /src/NutriLife.PresentationLayer
-RUN dotnet restore "NutriLife.PresentationLayer.csproj"
-RUN dotnet publish "NutriLife.PresentationLayer.csproj" -c Release -o /app/publish
+# Restore from solution file (resolves all 3 projects at once)
+RUN dotnet restore "NutriLife.sln"
+
+# Publish only the presentation layer
+RUN dotnet publish "NutriLife.PresentationLayer/NutriLife.PresentationLayer.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
