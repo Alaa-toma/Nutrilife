@@ -5,19 +5,26 @@ EXPOSE 10000
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 
-# Copy all 3 layers
 COPY NutriLife.PresentationLayer/ ./NutriLife.PresentationLayer/
 COPY Nutrilife.DataAccessLayer/ ./Nutrilife.DataAccessLayer/
 COPY Nutrilife.LogicLayer/ ./Nutrilife.LogicLayer/
 COPY NutriLife.sln .
 
-# Restore from solution file (resolves all 3 projects at once)
-RUN dotnet restore "NutriLife.sln"
+RUN dotnet restore "NutriLife.sln" --verbosity normal
 
-# Publish only the presentation layer
-RUN dotnet publish "NutriLife.PresentationLayer/NutriLife.PresentationLayer.csproj" -c Release -o /app/publish
+RUN dotnet publish "NutriLife.PresentationLayer/NutriLife.PresentationLayer.csproj" -c Release -o /app/publish --no-restore
 
 FROM base AS final
 WORKDIR /app
 COPY --from=build /app/publish .
 ENTRYPOINT ["dotnet", "NutriLife.PresentationLayer.dll"]
+```
+
+## 2. Add a `.dockerignore` file at the repo root
+
+Create `.dockerignore` next to your `NutriLife.sln`:
+```
+**/bin
+**/obj
+**/.vs
+**/images
