@@ -151,8 +151,8 @@ namespace NutriLife.PresentationLayer
             app.UseAuthorization();
 
             // to render ..
-            var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
-            app.Run($"http://0.0.0.0:{port}");
+            var port = Environment.GetEnvironmentVariable("PORT") ?? "10000";
+            builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
 
 
             app.MapControllers();
