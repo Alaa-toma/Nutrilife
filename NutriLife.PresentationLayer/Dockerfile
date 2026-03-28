@@ -18,13 +18,3 @@ FROM base AS final
 WORKDIR /app
 COPY --from=build /app/publish .
 ENTRYPOINT ["dotnet", "NutriLife.PresentationLayer.dll"]
-```
-
-## 2. Add a `.dockerignore` file at the repo root
-
-Create `.dockerignore` next to your `NutriLife.sln`:
-```
-**/bin
-**/obj
-**/.vs
-**/images
