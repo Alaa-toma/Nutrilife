@@ -1,0 +1,156 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\web\\back\\api\\firstapi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2CEC76AB-690A-4353-B1D3-79B0121A28DB}|firstapi\\firstapi.csproj|c:\\web\\back\\api\\firstapi\\firstapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CEC76AB-690A-4353-B1D3-79B0121A28DB}|firstapi\\firstapi.csproj|solutionrelative:firstapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CEC76AB-690A-4353-B1D3-79B0121A28DB}|firstapi\\firstapi.csproj|c:\\web\\back\\api\\firstapi\\firstapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CEC76AB-690A-4353-B1D3-79B0121A28DB}|firstapi\\firstapi.csproj|solutionrelative:firstapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CEC76AB-690A-4353-B1D3-79B0121A28DB}|firstapi\\firstapi.csproj|c:\\web\\back\\api\\firstapi\\firstapi\\firstapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2CEC76AB-690A-4353-B1D3-79B0121A28DB}|firstapi\\firstapi.csproj|solutionrelative:firstapi\\firstapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\web\\back\\api\\firstapi\\firstapi\\Migrations\\20260208235335_d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:firstapi\\Migrations\\20260208235335_d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CEC76AB-690A-4353-B1D3-79B0121A28DB}|firstapi\\firstapi.csproj|c:\\web\\back\\api\\firstapi\\firstapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CEC76AB-690A-4353-B1D3-79B0121A28DB}|firstapi\\firstapi.csproj|solutionrelative:firstapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\web\\back\\api\\firstapi\\firstapi\\Migrations\\20260208234728_c.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:firstapi\\Migrations\\20260208234728_c.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CEC76AB-690A-4353-B1D3-79B0121A28DB}|firstapi\\firstapi.csproj|c:\\web\\back\\api\\firstapi\\firstapi\\migrations\\20260208234432_b.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CEC76AB-690A-4353-B1D3-79B0121A28DB}|firstapi\\firstapi.csproj|solutionrelative:firstapi\\migrations\\20260208234432_b.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\web\\back\\api\\firstapi\\firstapi\\Migrations\\20260208232031_a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:firstapi\\Migrations\\20260208232031_a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20260208235335_d.cs",
+              "DocumentMoniker": "C:\\web\\back\\api\\firstapi\\firstapi\\Migrations\\20260208235335_d.cs",
+              "RelativeDocumentMoniker": "firstapi\\Migrations\\20260208235335_d.cs",
+              "ToolTip": "C:\\web\\back\\api\\firstapi\\firstapi\\Migrations\\20260208235335_d.cs",
+              "RelativeToolTip": "firstapi\\Migrations\\20260208235335_d.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-08T23:53:35.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20260208234728_c.cs",
+              "DocumentMoniker": "C:\\web\\back\\api\\firstapi\\firstapi\\Migrations\\20260208234728_c.cs",
+              "RelativeDocumentMoniker": "firstapi\\Migrations\\20260208234728_c.cs",
+              "ToolTip": "C:\\web\\back\\api\\firstapi\\firstapi\\Migrations\\20260208234728_c.cs",
+              "RelativeToolTip": "firstapi\\Migrations\\20260208234728_c.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAswA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-08T23:47:28.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20260208234432_b.cs",
+              "DocumentMoniker": "C:\\web\\back\\api\\firstapi\\firstapi\\Migrations\\20260208234432_b.cs",
+              "RelativeDocumentMoniker": "firstapi\\Migrations\\20260208234432_b.cs",
+              "ToolTip": "C:\\web\\back\\api\\firstapi\\firstapi\\Migrations\\20260208234432_b.cs",
+              "RelativeToolTip": "firstapi\\Migrations\\20260208234432_b.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-08T23:44:33.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20260208232031_a.cs",
+              "DocumentMoniker": "C:\\web\\back\\api\\firstapi\\firstapi\\Migrations\\20260208232031_a.cs",
+              "RelativeDocumentMoniker": "firstapi\\Migrations\\20260208232031_a.cs",
+              "ToolTip": "C:\\web\\back\\api\\firstapi\\firstapi\\Migrations\\20260208232031_a.cs",
+              "RelativeToolTip": "firstapi\\Migrations\\20260208232031_a.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-08T23:20:31.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\web\\back\\api\\firstapi\\firstapi\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "firstapi\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\web\\back\\api\\firstapi\\firstapi\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "firstapi\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAADwvyoAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-08T23:15:09.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "firstapi",
+              "DocumentMoniker": "C:\\web\\back\\api\\firstapi\\firstapi\\firstapi.csproj",
+              "RelativeDocumentMoniker": "firstapi\\firstapi.csproj",
+              "ToolTip": "C:\\web\\back\\api\\firstapi\\firstapi\\firstapi.csproj",
+              "RelativeToolTip": "firstapi\\firstapi.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-08T22:21:14.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\web\\back\\api\\firstapi\\firstapi\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "firstapi\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\web\\back\\api\\firstapi\\firstapi\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "firstapi\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAgwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-08T22:21:47.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\web\\back\\api\\firstapi\\firstapi\\Models\\User.cs",
+              "RelativeDocumentMoniker": "firstapi\\Models\\User.cs",
+              "ToolTip": "C:\\web\\back\\api\\firstapi\\firstapi\\Models\\User.cs",
+              "RelativeToolTip": "firstapi\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-08T22:20:34.66Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

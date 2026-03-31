@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\web\\back\\api\\NutriLife\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{12032744-4C59-4B2C-BC87-6842B0F87201}|NutriLife.PresentationLayer\\NutriLife.PresentationLayer.csproj|c:\\web\\back\\api\\nutrilife\\nutrilife.presentationlayer\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{12032744-4C59-4B2C-BC87-6842B0F87201}|NutriLife.PresentationLayer\\NutriLife.PresentationLayer.csproj|solutionrelative:nutrilife.presentationlayer\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\web\\back\\api\\NutriLife\\NutriLife.PresentationLayer\\appsettings.json",
+              "RelativeDocumentMoniker": "NutriLife.PresentationLayer\\appsettings.json",
+              "ToolTip": "C:\\web\\back\\api\\NutriLife\\NutriLife.PresentationLayer\\appsettings.json",
+              "RelativeToolTip": "NutriLife.PresentationLayer\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-30T23:34:41.944Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

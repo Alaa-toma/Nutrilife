@@ -1,0 +1,12 @@
+# 🔐 Secrets
+secrets/
+service-account-key.json
+
+# ⚙️ .NET build folders
+bin/
+obj/
+
+# 🛠 Config (local only)
+appsettings.Development.json
+o
+x
